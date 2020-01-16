@@ -41,7 +41,6 @@ fi
 cp -a "../${siteSource}/." .
 
 ls -la
-
 # 把所有的文件添加到git
 git add -A
 # 添加一条提交内容
