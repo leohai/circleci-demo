@@ -1,0 +1,19 @@
+ version: 2
+ jobs:
+   build:
+     docker:
+       - image: circleci/node:10
+     branches:
+       only :
+         - master 
+     steps:
+       - add_ssh_keys:
+         fingerprints:
+           - "97:00:cd:6c:e5:05:47:3b:ee:d2:0b:03:d9:b7:3a:c2"
+       - checkout
+       - run: 
+          name: Install
+           command: yarn install
+       - run:
+           name: build
+           command: yarn build
